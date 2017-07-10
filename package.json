@@ -1,0 +1,36 @@
+{
+  "name": "highland-pagination",
+  "version": "0.0.0",
+  "description": "highland-pagination",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/grunt-cli/bin/grunt test",
+    "prepublish": "./node_modules/grunt-cli/bin/grunt build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Parsimotion/highland-pagination.git"
+  },
+  "dependencies": {
+    "highland": "^2.11.0"
+  },
+  "devDependencies": {
+    "bluebird": "^3.5.0",
+    "coffee-script": "^1.12.6",
+    "grunt": "^1.0.1",
+    "grunt-bump": "^0.8.0",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-clean": "^1.1.0",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-mocha-test": "^0.13.2",
+    "lodash": "^4.17.4",
+    "mocha": "^3.4.2",
+    "should": "^11.2.1"
+  },
+  "author": "Parsimotion",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Parsimotion/highland-pagination/issues"
+  },
+  "homepage": "https://github.com/Parsimotion/highland-pagination#readme"
+}
