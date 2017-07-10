@@ -4,17 +4,13 @@
 
 [Installation instructions](https://github.com/Parsimotion/highland-pagination/wiki/Installation-Instructions)
 
-# Publish instructions
+```CoffeeScript
+HighlandPagination = require "highland-pagination"
 
-``` Console
-> grunt bump:[patch|minor|major]
-> npm install . -g 
-```
-Test your package in some project and make sure it works.
-When you are absolutely sure
+action = (page = null) -> 
+  getPage(page).then (items) -> 
+    { items, nextToken } 
+ 
+aHighlandStream = new HighlandPagination(action).stream()
 
-``` Console
-> git push origin master
-> git push origin master --tags
-> npm publish
 ```
