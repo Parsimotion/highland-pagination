@@ -15,7 +15,6 @@
     "highland": "^2.11.0"
   },
   "devDependencies": {
-    "bluebird": "^3.5.0",
     "coffee-script": "^1.12.6",
     "grunt": "^1.0.1",
     "grunt-bump": "^0.8.0",
