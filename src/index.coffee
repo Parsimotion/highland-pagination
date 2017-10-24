@@ -4,19 +4,15 @@ module.exports =
   class HighlandPagination
 
     constructor: (@fetcher) ->
+      @nextToken = undefined
 
     stream: ->
-      __doSomething = (continuation) =>
-        highland (push, next) =>
-          @fetcher continuation
-          .then ({ items, nextToken }) =>
-            push null, item for item in items
-            if nextToken?
-              next __doSomething nextToken
-            else
-              push null, highland.nil
-            
-            null
-          .catch (error) => push error
-
-      __doSomething()
+      highland (push, next) =>
+        @fetcher @nextToken
+        .then ({ items, @nextToken }) =>
+          push null, item for item in items
+          if @nextToken? then next() else push(null, highland.nil)
+          return
+        .catch (error) -> push error
+        
+        return
