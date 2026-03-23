@@ -41,3 +41,7 @@ jspm_packages
 
 # Ignore build
 lib
+
+site.config
+*.env
+*.env.*
